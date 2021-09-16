@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss'
 import Car from './Car/Car'
-import ErrorBoundary from './Car/ErrorBoundary/ErrorBoundary'
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 import Counter from './Counter'
 
 class App extends Component {
