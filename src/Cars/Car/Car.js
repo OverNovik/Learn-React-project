@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Car.css'
 import withClass from '../../hoc/withClass'
 import PropTypes from 'prop-types'
+import {withRouter} from 'react-router-dom'
 
 class Car extends React.Component {
 
@@ -17,7 +18,6 @@ class Car extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const inputClasses = [classes.input]
 
   if (this.props.name !== '') {
@@ -31,7 +31,7 @@ class Car extends React.Component {
   }
 
   return (
-    <React.Fragment>
+    <div onClick={() => this.props.history.push('/cars/' + this.props.name.toLowerCase())}>
       <h3>Сar name: {this.props.name}</h3>
       <p>Year: <strong>{this.props.year}</strong></p>
       <input
@@ -42,7 +42,7 @@ class Car extends React.Component {
         className={inputClasses.join(' ')}
       />
       <button onClick={this.props.onDelete}>Delete</button>
-    </React.Fragment>
+    </div>
   )
   }
 }
@@ -55,4 +55,4 @@ Car.propTypes = {
   onDelete: PropTypes.func
 }
 
-export default withClass(Car, classes.Car);
+export default withRouter(withClass(Car, classes.Car));

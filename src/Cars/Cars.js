@@ -77,7 +77,7 @@ class Cars extends Component {
               index={index}
               onDelete={this.deleteHandler.bind(this, index)}
               onChangeName={event => this.onChangeName(event.target.value, index)}
-              {...this.props}
+              // {...this.props}
             />
           </ErrorBoundary>
         )
