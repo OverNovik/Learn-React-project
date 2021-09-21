@@ -53,8 +53,14 @@ class Cars extends Component {
     console.log('App componentDidMount')
   }
 
+  goToHomePage = () => {
+    this.props.history.push({
+      pathname: '/'
+    })
+  }
+
   render() {
-    console.log('App render')
+    // console.log(this.props)
     const divStyle = {
       textAlign: 'center'
     }
@@ -71,6 +77,7 @@ class Cars extends Component {
               index={index}
               onDelete={this.deleteHandler.bind(this, index)}
               onChangeName={event => this.onChangeName(event.target.value, index)}
+              {...this.props}
             />
           </ErrorBoundary>
         )
@@ -101,6 +108,8 @@ class Cars extends Component {
           margin: 'auto',
           paddingTop: '20px'
         }}>
+        <button onClick={this.goToHomePage}>Go to home page</button>
+        <hr />
           { cars }
         </div>
       </div>

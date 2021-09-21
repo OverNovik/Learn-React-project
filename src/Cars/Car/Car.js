@@ -17,7 +17,7 @@ class Car extends React.Component {
   }
 
   render() {
-    console.log('Car render')
+    console.log(this.props)
     const inputClasses = [classes.input]
 
   if (this.props.name !== '') {
