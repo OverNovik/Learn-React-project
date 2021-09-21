@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Car.css'
-import withClass from '../hoc/withClass'
+import withClass from '../../hoc/withClass'
 import PropTypes from 'prop-types'
 
 class Car extends React.Component {

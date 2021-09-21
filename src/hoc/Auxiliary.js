@@ -1,6 +1,6 @@
 import React from "react";
 
-const Auxiliary = (props) => {
+const Auxiliary = props => {
   return props.children
 }
 
