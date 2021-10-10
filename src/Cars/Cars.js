@@ -8,7 +8,6 @@ export const ClickedContext = React.createContext(false)
 class Cars extends Component {
 
   constructor(props) {
-    console.log('App constructor')
     super(props)
 
     this.state = {
@@ -45,13 +44,13 @@ class Cars extends Component {
 
   }
 
-  componentWillMount() {
-    console.log('App componentWillMount')
-  }
+  // componentWillMount() {
+  //   console.log('App componentWillMount')
+  // }
 
-  componentDidMount() {
-    console.log('App componentDidMount')
-  }
+  // componentDidMount() {
+  //   console.log('App componentDidMount')
+  // }
 
   goToHomePage = () => {
     this.props.history.push({
